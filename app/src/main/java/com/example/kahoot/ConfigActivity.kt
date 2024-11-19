@@ -2,6 +2,7 @@ package com.example.kahoot
 
 import android.os.Bundle
 import android.widget.*
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
 class ConfigActivity : AppCompatActivity() {
@@ -10,6 +11,7 @@ class ConfigActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContentView(R.layout.activity_config)
 
         databaseHelper = QuizDatabaseHelper(this)
