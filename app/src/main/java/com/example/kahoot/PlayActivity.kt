@@ -5,6 +5,7 @@ import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
+
 class PlayActivity : AppCompatActivity() {
 
     private lateinit var tvQuestion: TextView
@@ -36,7 +37,7 @@ class PlayActivity : AppCompatActivity() {
         databaseHelper = QuizDatabaseHelper(this)
 
         // Obtener preguntas de la base de datos
-        questions = databaseHelper.getAllQuestions().shuffled().take(5)
+        questions = databaseHelper.getAllQuestions()
 
         if (questions.size < 8) {
             Toast.makeText(this, "Necesitas al menos 8 preguntas para jugar.", Toast.LENGTH_LONG).show()

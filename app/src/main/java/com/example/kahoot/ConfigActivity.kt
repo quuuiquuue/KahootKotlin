@@ -21,6 +21,7 @@ class ConfigActivity : AppCompatActivity() {
         val etOptionD = findViewById<EditText>(R.id.etOptionD)
         val rgCorrectAnswer = findViewById<RadioGroup>(R.id.rgCorrectAnswer)
         val btnSaveQuestion = findViewById<Button>(R.id.btnSaveQuestion)
+        val btnDeleteAllQuestions = findViewById<Button>(R.id.btnDeleteAllQuestions)
 
         btnSaveQuestion.setOnClickListener {
             val questionText = etQuestion.text.toString()
@@ -35,6 +36,7 @@ class ConfigActivity : AppCompatActivity() {
                 R.id.rbOptionD -> "D"
                 else -> ""
             }
+
 
             if (questionText.isBlank() || optionA.isBlank() || optionB.isBlank() ||
                 optionC.isBlank() || optionD.isBlank() || correctAnswer.isBlank()) {
@@ -61,5 +63,19 @@ class ConfigActivity : AppCompatActivity() {
             etOptionD.text.clear()
             rgCorrectAnswer.clearCheck()
         }
+
+        // Configurar el listener para el botón
+        btnDeleteAllQuestions.setOnClickListener {
+            deleteAllQuestions()
+        }
+    }
+
+    // Método para borrar todas las preguntas
+    fun deleteAllQuestions() {
+        // Llamar al método que borra todas las preguntas de la base de datos
+        databaseHelper.deleteAllQuestions()
+
+        // Mostrar un mensaje de confirmación
+        Toast.makeText(this, "Todas las preguntas han sido eliminadas.", Toast.LENGTH_SHORT).show()
     }
 }

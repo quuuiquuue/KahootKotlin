@@ -85,6 +85,13 @@
                 android:layout_height="wrap_content"
                 android:text="Guardar Pregunta"
                 android:layout_marginTop="16dp" />
+
+            <Button
+                android:id="@+id/btnDeleteAllQuestions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Borrar todas las pregunta"
+                android:layout_marginTop="16dp" />
         </LinearLayout>
     </ScrollView>
 
