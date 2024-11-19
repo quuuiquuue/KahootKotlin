@@ -14,6 +14,13 @@
         android:padding="16dp"
         android:gravity="center">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/kahoot_logo"
+            android:layout_marginBottom="32dp" />
+
+
         <Button
             android:id="@+id/btnConfig"
             android:layout_width="match_parent"
@@ -28,6 +35,16 @@
             android:text="Jugar"
             android:padding="16dp"
             android:layout_marginTop="16dp" />
+
+        <!-- TextView con los nombres del proyecto -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desarrollado por: Enrique Contreras Lopez y Alejandro Jurado Magdaleno"
+            android:textSize="18sp"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:textColor="#000000"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
